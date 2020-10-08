@@ -74,7 +74,8 @@ article p {
 article ul {
   margin-left: 5%;
   font-size: 110%;
-  list-style: circle;
+  /* changed list style to box */
+  list-style: box;
 }
 
 footer {
