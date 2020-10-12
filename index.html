@@ -1,74 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Selectors with CSS</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced Selectors with CSS</title>
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  <img src="" alt="">
+  <body>
+    <header>
+      <h1>The CSS Blog</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Resources</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-  <header>
-    <h1>The CSS Blog</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Resources</a></li>
-      </ul>
-    </nav>
-  </header>
+    <div class="hero">
+      <img src="assets\images\MadScience.png" 
+           alt="A hardworking UW Coding Bootcamp student">
+    </div>
 
-  <main>
-    <section>
-      <article>
-        <h2>A List of Learning Resources, I Changed this part and my name is Laua</h2>
-        <div>
-          <p>A successful web developer, like Keenan, is one that knows that there's always room to grow and learn. You may not use
-            every single tool that's offered to you, but it's always good to know that certain tools exist. Check out
-            these resources to broaden your knowledge:</p>
-          <ul>
-            <li>
-              Mozilla Developer Network's documentation on <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS">Cascading Style Sheets (CSS)</a> is a good
-              resource for all things CSS and web development in general.
-            </li>
-            <li>Our own <a href="./assets/css/reset.css">reset.css</a> file shows how to set default browser styles.
-            </li>
-            <li>Another reset style sheet called
-              <a href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">normalize.css</a> is popular in the
-              web development community</li>
-            <li>Our own <a href="./assets/css/style.css">style.css</a> file shows how we've designed the page we're
-              reading!
-            </li>
+    <main>
 
-            <li>The popular blog, <a href="https://css-tricks.com/">CSS Tricks,</a> has a lot of articles and resources
-              to make you a better developer!
-            </li>
+      <section>
+          <h2>
+            A List of Learning Resources. I Changed this part and my name is
+            Laura.
+          </h2>
+        
+            <p>
+              A successful web developer, like Keenan, is one that knows that
+              there's always room to grow and learn. You may not use every
+              single tool that's offered to you, but it's always good to know
+              that certain tools exist. Check out these resources to broaden
+              your knowledge:
+            </p>
+      </section>
 
-          </ul>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde
-            non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Consectetur, nisi, saepe quas sint consequuntur esse
-            voluptatum, dolores dolor aspernatur neque laborum dolorum dolorem repudiandae. Dignissimos eveniet sequi
-            corporis tempore ullam!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde
-            non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore!</p>
-            <!-- added a paragraph -->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil natus recusandae amet nostrum odit, ut unde
-            non sint, quia sed inventore odio, delectus iure! Eligendi vitae fuga blanditiis accusamus tempore!</p>
-  
-          </div>
-      </article>
-    </section>
-  </main>
+      <div class="resources"><!--Considered turning this into a section class tag but didn't want to gum things up...-->
+        
+        <!--Images within articles are placeholders-->
+        <article class="card">
+          <header>Mozilla Developer Network's documentation is a good resource for all things CSS and web development in
+              general.</header>
+              <a href href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                <img src="assets\images\mozilla.png" alt=""></a>
+        </article>
+                
+        <article class="card">
+          <header>This Cascading Style Sheets (CSS) file shows how to set default browser styles.</header>
+              <a href="./assets/css/reset.css">
+                <img src="assets\images\reset.png" alt=""></a>
+        </article>
+            
+        <article class="card">
+          <header>This reset style sheet called is popular in the web development community.</header>
+              <a href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+                <img src="assets\images\necolas.png" alt=""></a>
+        </article>
+            
+        <article class="card">
+          <header>Our own "style.css" file shows how we've designed the page you're reading!</header>
+              <a href="./assets/css/style.css">
+                <img src="assets\images\stylish.png" alt=""></a>
+        </article>
 
-  <footer>
-    <span>Thanks for visiting! Now Laura is changing the footer </span>
-  </footer>
-</body>
+        <article class="card">
+          <header>The popular blog, CSS Tricks, has a lot of
+              articles and resources to make you a better developer!</header>
+              <a href="https://css-tricks.com/">
+                <img src="assets\images\Css-Tricks.png" alt=""></a>
+        </article>
+    </div>
 
+        <section>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                natus recusandae amet nostrum odit, ut unde non sint, quia sed
+                inventore odio, delectus iure! Eligendi vitae fuga blanditiis
+                accusamus tempore! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Consectetur, nisi, saepe quas sint consequuntur
+                esse voluptatum, dolores dolor aspernatur neque laborum dolorum
+                dolorem repudiandae. Dignissimos eveniet sequi corporis tempore
+                ullam!
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                natus recusandae amet nostrum odit, ut unde non sint, quia sed
+                inventore odio, delectus iure! Eligendi vitae fuga blanditiis
+                accusamus tempore!
+              </p>
+              <!-- added a paragraph -->
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                natus recusandae amet nostrum odit, ut unde non sint, quia sed
+                inventore odio, delectus iure! Eligendi vitae fuga blanditiis
+                accusamus tempore!
+              </p>
+        </section>
+    
+    </main>
+
+    <footer>
+      <span>Thanks for visiting! Now Laura is changing the footer!</span>
+    </footer>
+  </body>
 </html>
