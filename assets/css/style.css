@@ -31,10 +31,28 @@ header h1 {
   font-size: 300%;
 }
 
+/* Hero stuff */
+.hero {
+  position: relative;
+  display: inline-block;
+}
+
 .hero img{ /*Not sure how to get this image to scale properly in the window*/
-  height: 400px;
+  height: 600px;
   width: 100%;
 }
+
+/* SP: added text over hero image, used tutorialrepublic for start */
+.hero-text {
+  position: absolute;
+  left: 10pt;
+  top: 40%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 20%; /* Set the width of the positioned div */
+  color: black;
+  background-color: white;
+}
+
 
 h1 {
   font-size: 200%;
