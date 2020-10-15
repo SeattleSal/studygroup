@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+</head>
+<body>
+    <!--  not sure why this image doesn't pop up until game is over  -->
+    <img src="./assets/images/RPS.png">
+
+    <script>
+        var userPoints = 0;
+        var aiPoints = 0;
+        var ties = 0;
+        var aiChoice;
+
+        for (var gamesPlayed = 0; gamesPlayed < 5; gamesPlayed++) {
+
+            console.log("Round " + (gamesPlayed + 1));
+
+            /* prompt user for their choice */
+            var userChoice = prompt("Rock, Paper, or Scissors");
+            console.log("User Choice: " + userChoice);
+
+            /* generate AI choice */
+            var aiNum = Math.floor((Math.random() * 3) + 1);
+
+            if(aiNum == 1){
+                aiChoice = "Rock";
+            } else if (aiNum == 2) {
+                aiChoice = "Paper";
+            } else {
+                aiChoice = "Scissors";
+            }
+            console.log("AI Choice: " + aiChoice);
+
+            /* tie scenarios */
+            if (userChoice == aiChoice) {
+                console.log("Tie!");
+                ties++;
+            }
+
+            /* user wins scenarios */
+            if((aiChoice == "Rock" && userChoice == "Scissors") ||
+               (aiChoice == "Paper" && userChoice == "Rock") ||
+               (aiChoice == "Scissors" && userChoice == "Paper")) {
+                    console.log(`${aiChoice} beats ${userChoice}`);
+                    console.log("You lose!");
+                    aiPoints++;
+            }
+
+            /* user wins scenarios */
+            if ((userChoice == "Rock" && aiChoice == "Scissors") ||
+                (userChoice == "Paper" && aiChoice == "Rock") || 
+                (userChoice == "Scissors" && aiChoice == "Paper")) {
+                    console.log(`${userChoice} beats ${aiChoice}`);
+                    console.log("You win!");
+                    userPoints++;
+            }
+
+            /* space in console between rounds */
+            console.log(" ");
+        }
+
+        /* final scores shown to user, extra winner message if user has more points than computer */
+        alert(`Final scores! You: ${userPoints} AI: ${aiPoints} Ties: ${ties}`);
+        if (userPoints > aiPoints) {
+            alert("You are a winner!");
+        }
+
+    </script>
+</body>
+</html>
